@@ -20,7 +20,7 @@ public class RepeatedAppointmentTest {
     }
     
     @Test
-    void shouldSubmitRequest() {
+    void shouldRequireConfirmationAfterRepeatedAppointment() {
         ApplicantData applicant = DataGenerator.generateData("ru");
         LocalDate currentDate = LocalDate.now();
         String appointmentDate1 = currentDate.plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
