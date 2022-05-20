@@ -3,9 +3,9 @@ package ru.netology;
 import lombok.Data;
 
 @Data public class  ApplicantData {
-    public String city;
-    public String appointmentDate;
-    public String fullName;
+    private String city;
+    private String appointmentDate;
+    private String fullName;
     private String phone;
     
     public ApplicantData(String city, String fullName, String phone) {

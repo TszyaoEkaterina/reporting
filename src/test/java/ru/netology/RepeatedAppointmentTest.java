@@ -44,6 +44,7 @@ public class RepeatedAppointmentTest {
         $("[data-test-id=replan-notification] .notification__content").should(ownText("У вас уже запланирована" +
                 " встреча на другую дату. Перепланировать?"));
     }
+    
     @Test
     void shouldReplanAppointmentAfterRepeatedAppointmentAndConfirmation() {
         ApplicantData applicant = DataGenerator.generateData("ru");
