@@ -19,8 +19,8 @@ public class RepeatedAppointmentTest {
     @Test
     void shouldReplanAppointmentAfterRepeatedAppointmentAndConfirmation() {
         DataGenerator.ApplicantData applicant = DataGenerator.generateApplicantData("ru");
-        String appointmentDate1 = DataGenerator.generateAppointmentDate1();
-        String appointmentDate2 = DataGenerator.generateAppointmentDate2();
+        String appointmentDate1 = DataGenerator.generateAppointmentDate(3);
+        String appointmentDate2 = DataGenerator.generateAppointmentDate(5);
         //first submission
         $("[placeholder=Город]").setValue(applicant.getCity());
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);//clear field

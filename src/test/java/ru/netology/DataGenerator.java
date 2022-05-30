@@ -19,14 +19,9 @@ public class DataGenerator {
         return applicant;
     }
     
-    public static String generateAppointmentDate1() {
-        String appointmentDate1 = currentDate.plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        return appointmentDate1;
-    }
-    
-    public static String generateAppointmentDate2() {
-        String appointmentDate2 = currentDate.plusDays(7).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        return appointmentDate2;
+    public static String generateAppointmentDate(int daysFromToday) {
+        String appointmentDate = currentDate.plusDays(daysFromToday).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        return appointmentDate;
     }
     
     @Value
